@@ -9,7 +9,7 @@ if [ $1 == "mirror_local" ]; then
   wget https://mirror.virkea.com/zlib-1.2.11.tar.gz;
   wget https://mirror.virkea.com/uuid-1.6.2.tar.gz;
   wget https://mirror.virkea.com/libressl-2.5.1.tar.gz;
-  wget https://mirror.virkea.com/postgresql-9.6.1.tar.gz;
+  wget https://mirror.virkea.com/postgresql-9.6.1.tar.bz2;
 else
   wget http://www.zlib.net/zlib-1.2.11.tar.gz;
   wget http://www.mirrorservice.org/sites/ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz;
@@ -48,7 +48,9 @@ cd postgresql-9.6.1
 ./configure --with-ossp-uuid --with-openssl
 make -j 4
 sudo make install
-cd ..
+cd contrib/uuid-ossp
+make && sudo make install
+cd ../../..
 
 # create user
 sudo useradd postgres -m -d /home/postgres -s /bin/bash -U
