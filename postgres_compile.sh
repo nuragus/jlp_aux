@@ -6,15 +6,15 @@ sudo apt install -y wget build-essential libreadline-dev
 
 # download sources
 if [ $1 == "mirror_local" ]; then
-  wget https://mirror.virkea.com/zlib-1.2.11.tar.gz
-  wget https://mirror.virkea.com/uuid-1.6.2.tar.gz
-  wget https://mirror.virkea.com/uuid-1.6.2.tar.gz
-  wget https://mirror.virkea.com/postgresql-9.6.1.tar.gz
+  wget https://mirror.virkea.com/zlib-1.2.11.tar.gz;
+  wget https://mirror.virkea.com/uuid-1.6.2.tar.gz;
+  wget https://mirror.virkea.com/libressl-2.5.1.tar.gz;
+  wget https://mirror.virkea.com/postgresql-9.6.1.tar.gz;
 else
-  wget http://www.zlib.net/zlib-1.2.11.tar.gz
-  wget http://www.mirrorservice.org/sites/ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz
-  wget https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.5.1.tar.gz
-  wget https://ftp.postgresql.org/pub/source/v9.6.1/postgresql-9.6.1.tar.bz2
+  wget http://www.zlib.net/zlib-1.2.11.tar.gz;
+  wget http://www.mirrorservice.org/sites/ftp.ossp.org/pkg/lib/uuid/uuid-1.6.2.tar.gz;
+  wget https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-2.5.1.tar.gz;
+  wget https://ftp.postgresql.org/pub/source/v9.6.1/postgresql-9.6.1.tar.bz2;
 fi
 
 # compile zlib
