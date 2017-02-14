@@ -36,6 +36,7 @@ cd ..
 sudo ln -s /usr/local/lib/libcrypto.so /usr/lib/libcrypto.so.41
 sudo ln -s /usr/local/lib/libssl.so /usr/lib/libssl.so.43
 sudo ln -s /usr/local/lib/libuuid.so /usr/lib/libuuid.so
+sudo ln -s /usr/local/lib/libuuid.so /usr/lib/libuuid.so.16
 
 # compile postgres
 bzip2 -d postgresql-9.6.1.tar.bz2
