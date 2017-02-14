@@ -1,9 +1,11 @@
+#!/bin/bash
+
 # prereqs
 sudo apt update
 sudo apt install -y wget build-essential libreadline-dev
 
 # download sources
-if [ $1 == "mirror_local" ] then
+if [ $1 == "mirror_local" ]; then
   wget https://mirror.virkea.com/zlib-1.2.11.tar.gz
   wget https://mirror.virkea.com/uuid-1.6.2.tar.gz
   wget https://mirror.virkea.com/uuid-1.6.2.tar.gz
