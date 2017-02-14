@@ -7,6 +7,12 @@ select avg(length) from seq_sequence;
 # average column-based
 select avg(length) from seq_sequence_column;
 
+# count row-based
+select count(*) from seq_sequence;
+
+# count column-based
+selecy count(*) from seq_sequence_column;
+
 # average below 1200 row-based
 select avg(length) from seq_sequence where length<1200;
 
@@ -18,6 +24,8 @@ select avg(length) from seq_sequence where length between 100 and 500;
 
 # average between 100 and 500 column-based
 select avg(length) from seq_sequence_column where length between 100 and 500;
+
+
 
 # select json normal
 select * from sf limit 1;
