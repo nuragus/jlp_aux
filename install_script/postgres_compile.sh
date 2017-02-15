@@ -69,6 +69,8 @@ sudo echo "alias pgstart='pg_ctl -D /usr/local/pgsql/data start'" >> /home/postg
 sudo echo "alias pgstop='pg_ctl -D /usr/local/pgsql/data stop'" >> /home/postgres/.bash_profile
 sudo echo "alias pgreload='pg_ctl -D /usr/local/pgsql/data reload'" >> /home/postgres/.bash_profile
 sudo echo "alias cddd='cd /usr/local/pgsql/data '" >> /home/postgres/.bash_profile
+sudo cp /home/postgres/.bash_profile /home/postgres/.bashrc
+sudo chown -R postgres:postgres /home/postgres/.bashrc
 
 # create data directory
 sudo mkdir /usr/local/pgsql/data
