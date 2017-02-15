@@ -44,3 +44,12 @@ select data->'properties'->'STREET' from sf;
 
 # count group street
 select data->'properties'->'STREET' as data, count(data) from sf group by data->'properties'->'STREET';
+
+# display type
+select data->'geometry'->'type' from sf limit 100;
+
+# display type where not Polygon
+select data->'geometry'->'type' from sf where data #> '{geometry,type}' != '"Polygon"';
+
+# select coordinate where type is MultiPolygon
+select jsonb_pretty(data->'geometry'->'coordinates') from sf where data #> '{geometry,type}' = '"MultiPolygon"';
