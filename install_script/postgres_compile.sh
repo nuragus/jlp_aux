@@ -51,7 +51,7 @@ sudo make install
 cd contrib/uuid-ossp
 make && sudo make install
 cd ../ltree
-make $$ make install
+make && make install
 cd ../../..
 
 # create user
