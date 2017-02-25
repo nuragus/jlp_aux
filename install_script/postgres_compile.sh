@@ -52,7 +52,8 @@ cd contrib/uuid-ossp
 make && sudo make install
 cd ../ltree
 make && sudo make install
-cd ../../..
+cd ../../src/interfaces/libpq
+make && sudo make install
 
 # create user
 sudo useradd postgres -m -d /home/postgres -s /bin/bash -U
