@@ -20,3 +20,21 @@ create foreign table seq_sequence_column (
 )
 server cstore_server
 options(compression 'pglz');
+
+create type day as enum ('Monday','Tuesday','Wednesday','Thursday','Friday');
+create type working_condition as enum ('Permanent','Contract');
+drop table if exists employees;
+create table employees (
+  id int not null,
+  room_no smallint not null,
+  ktp_no numeric not null,
+  name_first varchar,
+  name_last varchar,
+  join_date timestamp without time zone,
+  basic_pay numeric(18,2),
+  employee_id serial,
+  start_day day,
+  working_condition working_condition
+);
+
+
