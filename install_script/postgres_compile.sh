@@ -20,19 +20,19 @@ fi
 # compile zlib
 tar -xzf zlib-1.2.11.tar.gz
 cd zlib-1.2.11
-./configure && make -j 4 && sudo make install
+./configure && make -j 2 && sudo make install
 cd ..
 
 # compile uuid
 tar -xzf uuid-1.6.2.tar.gz
 cd uuid-1.6.2
-./configure && make -j 4 && sudo make install
+./configure && make -j 2 && sudo make install
 cd ..
 
 # compile libressl
 tar -xzf libressl-2.5.1.tar.gz
 cd libressl-2.5.1
-./configure && make -j 4 && sudo make install
+./configure && make -j 2 && sudo make install
 cd ..
 
 # link libraries
@@ -46,7 +46,7 @@ bzip2 -d postgresql-9.6.1.tar.bz2
 tar -xf postgresql-9.6.1.tar
 cd postgresql-9.6.1
 ./configure --with-ossp-uuid --with-openssl
-make -j 4
+make -j 2
 sudo make install
 cd contrib/uuid-ossp
 make && sudo make install
